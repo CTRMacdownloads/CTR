@@ -15,7 +15,7 @@ def make_logistic_case_2d(cases: int = 1000,
                           rng: np.random.Generator = np.random.default_rng()
                          ) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
     X = rng.normal(0, 1.0, size=(cases, 2))
-    # 控制“可分性”
+ 
     slope_scale = np.interp(1 - difficulty, [0, 1], [0.6, 6.0])
     noise_std   = np.interp(difficulty,     [0, 1], [0.0, 0.8])
 
