@@ -66,7 +66,7 @@ def plot_2d(X, Y, theta_true, theta_learned):
             x=X[mask,0], y=X[mask,1], mode="markers", name=name, opacity=0.7
         ))
 
-    # 真实边界：p=0.5 等高线
+  
     fig.add_trace(go.Contour(
         x=xs, y=ys, z=Pg_true, showscale=False,
         contours=dict(start=0.5, end=0.5, size=1.0, coloring="lines"),
